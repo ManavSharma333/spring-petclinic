@@ -5,14 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh './mvnw clean install'
+                    bat './mvnw.cmd clean install'
                 }
             }
         }
         stage('Test') {
             steps {
                 script {
-                    sh './mvnw test'
+                    bat './mvnw.cmd test'
                 }
             }
         }
